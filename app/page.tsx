@@ -13,6 +13,7 @@ import {
 } from 'react-icons/si'
 import Spotlight from "./components/spotlight";
 import PrimaryLinks from "./components/primary-links";
+import Link from "next/link";
 
 const links = [
   {
@@ -89,7 +90,7 @@ const HomePage = () => {
           const { icon, title, url } = link
 
           return (
-            <a
+            <Link
               key={url}
               href={url}
               className='relative flex h-14 w-full items-center justify-center rounded-xl border border-zinc-700 bg-[#151414] px-8 py-4 transition-colors duration-300 hover:border-zinc-500'
@@ -98,7 +99,7 @@ const HomePage = () => {
             >
               <div className='absolute left-8'>{icon}</div>
               <div className='text-zinc-100'>{title}</div>
-            </a>
+            </Link>
           )
         })}
       </div>
